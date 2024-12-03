@@ -1,38 +1,108 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.App .Header{
+  font-weight:initial;
+  margin-bottom: 20vh;
+}
+
+.App .UploadForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  width: 300px;
+  transition: border-color 0.3s ease;
+
+  margin-bottom: 20vh;
+}
+
+.App .UploadForm:hover {
+  border-color: #007bff;
+}
+
+.App .UploadForm input[type="file"] {
+  display: none;
+}
+
+.App .UploadForm label {
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.App .UploadForm label:hover {
+  background-color: #0056b3;
+}
+
+.App .UploadForm button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.App .UploadForm button:hover {
+  background-color: #218838;
+}
+
+.App .Table {
+  margin-top: 20px;
+  width: 80%;
+  border-collapse: collapse;
+
+  margin-bottom: 20vh;
+}
+
+.App .Table thead {
+  background-color: #007bff;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App .Table tr {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App .Table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.App .FileName {
+  margin-top: 10px;
+  color: #555;
+  font-size: 14px;
+  font-style: italic;
+}
+
+
+.Footnote{
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Footnote a{
+  color: black;
 }
